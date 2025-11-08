@@ -79,8 +79,10 @@ jobs:
         id: tag
         shell: bash
         run: |
-          REPO_OWNER="${GITHUB_REPOSITORY_OWNER@L}"  # to lower case
-          REPO_NAME="${{ github.event.repository.name }}"
+          #REPO_OWNER="${GITHUB_REPOSITORY_OWNER@L}"  # to lower case
+          REPO_OWNER=ggml-org
+          #REPO_NAME="${{ github.event.repository.name }}"
+          REPO_NAME=llama.cpp
 
           # list all tags possible
           if [[ "${{ matrix.config.tag }}" == "cpu" ]]; then
