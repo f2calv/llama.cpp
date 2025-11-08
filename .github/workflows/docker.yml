@@ -126,7 +126,7 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           context: .
-          push: true
+          push: false
           platforms: ${{ matrix.config.platforms }}
           # tag list is generated from step above
           tags: ${{ steps.tag.outputs.full_output_tags }}
@@ -148,7 +148,7 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           context: .
-          push: true
+          push: false
           platforms: ${{ matrix.config.platforms }}
           # tag list is generated from step above
           tags: ${{ steps.tag.outputs.light_output_tags }}
@@ -170,7 +170,7 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           context: .
-          push: true
+          push: false
           platforms: ${{ matrix.config.platforms }}
           # tag list is generated from step above
           tags: ${{ steps.tag.outputs.server_output_tags }}
